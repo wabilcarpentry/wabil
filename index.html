@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>منجرة وابل</title>
+  <style>
+    body { font-family: 'Tahoma', sans-serif; margin: 0; padding: 0; background: #f8f8f8; color: #333; direction: rtl; }
+    header { background: #222; color: white; padding: 20px; text-align: center; }
+    nav { background: #444; display: flex; justify-content: center; gap: 20px; padding: 10px 0; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+    .hero { background: url('hero.jpg') center/cover no-repeat; color: white; padding: 100px 20px; text-align: center; }
+    section { padding: 40px 20px; max-width: 1000px; margin: auto; }
+    .catalog { display: flex; gap: 20px; flex-wrap: wrap; }
+    .catalog > div { flex: 1; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    footer { background: #222; color: white; padding: 20px; text-align: center; margin-top: 40px; }
+    img { width: 100%; border-radius: 8px; }
+    form { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    input, textarea { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
+    button { background: #444; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>منجرة وابل للديكور والألومنيوم</h1>
+</header>
+
+<nav>
+  <a href="#about">من نحن</a>
+  <a href="#catalog">الكتالوج</a>
+  <a href="#services">خدماتنا</a>
+  <a href="#contact">اتصل بنا</a>
+</nav>
+
+<section class="hero">
+  <h2>نُبدع من الخشب والألمنيوم ما يُلهمك</h2>
+  <p>اكتشف الجودة، الأناقة، والاحترافية في كل قطعة نصنعها</p>
+</section>
+
+<section id="about">
+  <h2>من نحن</h2>
+  <p>منجرة وابل هي ورشة متخصصة في أعمال النجارة والديكور والألومنيوم، تأسست في أبوظبي لتقديم مشاريع مميزة بجودة عالية واهتمام بأدق التفاصيل، مع التزامنا الكامل بالمواعيد وخدمة العملاء.</p>
+</section>
+
+<section id="catalog">
+  <h2>الكتالوج</h2>
+  <div class="catalog">
+    <div>
+      <h3>أعمال النجارة</h3>
+      <img src="wood1.jpg" alt="أعمال نجارة">
+      <p>أبواب، خزائن، مطابخ، ديكورات خشبية بتصاميم عصرية وكلاسيكية.</p>
+    </div>
+    <div>
+      <h3>أعمال الألومنيوم</h3>
+      <img src="aluminum1.jpg" alt="أعمال ألومنيوم">
+      <p>نوافذ، واجهات زجاجية، أبواب ألومنيوم، تقسيمات داخلية وغيرها.</p>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <h2>خدماتنا</h2>
+  <ul>
+    <li>تصميم وتنفيذ مشاريع نجارة داخلية وخارجية</li>
+    <li>تفصيل مطابخ وخزائن حسب الطلب</li>
+    <li>توريد وتركيب واجهات ألومنيوم وزجاج</li>
+    <li>ديكورات داخلية خشبية مبتكرة</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>اتصل بنا</h2>
+  <p>📍 أبوظبي - مصفح M40</p>
+  <p>📞 أبو سعيد: 0506626377 | منذور: 0562117911 | رابيو: +971527093607</p>
+  <p>📧 البريد الإلكتروني: wabilcarpentry@gmail.com</p>
+  <p>📱 تابعونا على الإنستغرام: @wabilfordecoration</p>
+
+  <h3>نموذج تواصل مباشر</h3>
+  <form action="https://formsubmit.co/wabilcarpentry@gmail.com" method="POST">
+    <label for="name">الاسم:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">البريد الإلكتروني:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">رسالتك:</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <button type="submit">إرسال</button>
+  </form>
+</section>
+
+<footer>
+  &copy; 2025 منجرة وابل. جميع الحقوق محفوظة.
+</footer>
+
+</body>
+</html>
