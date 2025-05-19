@@ -1,60 +1,113 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>منجرة وابل</title>
-  <style> 
-.slider {
-  position: relative;
-  width: 100%;
-  max-width: 400px; /* يمكنك التعديل حسب الحاجة */
-  height: 300px;
-  margin: auto;
-  overflow: hidden;
-}
-.slider-image {
-  position: absolute;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  opacity: 0;
-  transition: opacity 1s;
-  object-fit: cover;
-  border-radius: 8px;
-}
-.slider-image.active {
-  opacity: 1;
-  z-index: 1;
-}
-    body { font-family: 'Tahoma', sans-serif; margin: 0; padding: 0; background: #f8f8f8; color: #222; direction: rtl; }
-    header { background: #222; color: white; padding: 20px; text-align: center; }
-    nav { background: #444; display: flex; justify-content: center; gap: 20px; padding: 10px 0; }
-    nav a { color: white; text-decoration: none; font-weight: bold; }
+  <style>
+    body {
+      font-family: 'Tahoma', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f8f8;
+      color: #222;
+      direction: rtl;
+    }
+    header {
+      background: #222;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #444;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
     .hero {
       background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('hero.jpg') center/cover no-repeat;
       color: #000;
       padding: 100px 20px;
       text-align: center;
     }
-    section { padding: 40px 20px; max-width: 1000px; margin: auto; }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
     .catalog { display: flex; gap: 20px; flex-wrap: wrap; }
-    .catalog > div { flex: 1; background: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); color: #111; }
-    footer { background: #222; color: white; padding: 20px; text-align: center; margin-top: 40px; }
-    img { width: 100%; border-radius: 8px; object-fit: cover; max-height: 300px; }
-    form { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-    input, textarea { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
-    button { background: #444; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+    .catalog > div {
+      flex: 1;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      color: #111;
+    }
+    .slider {
+      position: relative;
+      width: 100%;
+      max-width: 400px;
+      height: 300px;
+      margin: auto;
+      overflow: hidden;
+    }
+    .slider-image {
+      position: absolute;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      opacity: 0;
+      transition: opacity 1s;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .slider-image.active {
+      opacity: 1;
+      z-index: 1;
+    }
+    footer {
+      background: #222;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+    img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+      max-height: 300px;
+    }
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #444;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
   </style>
-</head> 
-<script>
-let currentIndex = 0;
-const images = document.querySelectorAll('#catalog-slider .slider-image');
-setInterval(() => {
-  images[currentIndex].classList.remove('active');
-  currentIndex = (currentIndex + 1) % images.length;
-  images[currentIndex].classList.add('active');
-}, 2500); // غيّر الرقم لتغيير سرعة التبديل
-</script>
+</head>
 <body>
 
 <header>
@@ -69,7 +122,7 @@ setInterval(() => {
 </nav>
 
 <section class="hero">
-  <h2>نُبدع من الخشب والألمنيوم ما يُلهمك</h2>
+  <h2>من الخشب والألمنيوم، نخلق تصاميم تُعبّر عن ذوقك</h2>
   <p>اكتشف الجودة، الأناقة، والاحترافية في كل قطعة نصنعها</p>
 </section>
 
@@ -80,10 +133,11 @@ setInterval(() => {
 
 <section id="catalog">
   <h2>الكتالوج</h2>
- <div class="slider" id="catalog-slider">
-  <img src="https://raw.githubusercontent.com/wabilcarpentry/wabil/main/%D8%B5%D9%88%D8%B1%D8%A9%20%D9%88%D8%A7%D8%AA%D8%B3%D8%A7%D8%A8%20%D8%A8%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE%202025-05-19%20%20%D9%81%D9%8A%2010.00.32_2b0a32fb.jpg" class="slider-image active" alt="صورة1">
-  <img src="https://raw.githubusercontent.com/wabilcarpentry/wabil/main/%D8%B5%D9%88%D8%B1%D8%A9%20%D9%88%D8%A7%D8%AA%D8%B3%D8%A7%D8%A8%20%D8%A8%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE%202025-05-19%20%D9%81%D9%8A%2010.00.33_f6c1d7b5.jpg" class="slider-image" alt="صورة2">
-</div>
+  <div class="slider" id="catalog-slider">
+    <img src="https://raw.githubusercontent.com/wabilcarpentry/wabil/main/%D8%B5%D9%88%D8%B1%D8%A9%20%D9%88%D8%A7%D8%AA%D8%B3%D8%A7%D8%A8%20%D8%A8%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE%202025-05-19%20%20%D9%81%D9%8A%2010.00.32_2b0a32fb.jpg" class="slider-image active" alt="صورة1">
+    <img src="https://raw.githubusercontent.com/wabilcarpentry/wabil/main/%D8%B5%D9%88%D8%B1%D8%A9%20%D9%88%D8%A7%D8%AA%D8%B3%D8%A7%D8%A8%20%D8%A8%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE%202025-05-19%20%D9%81%D9%8A%2010.00.33_f6c1d7b5.jpg" class="slider-image" alt="صورة2">
+    <!-- يمكنك إضافة المزيد من الصور بنفس الطريقة -->
+  </div>
 </section>
 
 <section id="services">
@@ -99,7 +153,7 @@ setInterval(() => {
 <section id="contact">
   <h2>اتصل بنا</h2>
   <p>📍 أبوظبي - مصفح M40</p>
-  <p>📞 أبو سعيد: 0557119887 | منصور: 0562117911 | ربيع: +971527093607</p>
+  <p>📞 أبو سعيد: 0557119887 | منصور: 0562117911 | ربيع: +0527093607</p>
   <p>📧 البريد الإلكتروني: wabilcarpentry@gmail.com</p>
   <p>📱 تابعونا على الإنستغرام: wabilcarpentry</p>
 
@@ -122,5 +176,14 @@ setInterval(() => {
   &copy; 2025 منجرة وابل. جميع الحقوق محفوظة.
 </footer>
 
+<script>
+  let currentIndex = 0;
+  const images = document.querySelectorAll('#catalog-slider .slider-image');
+  setInterval(() => {
+    images[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % images.length;
+    images[currentIndex].classList.add('active');
+  }, 2500);
+</script>
 </body>
 </html>
