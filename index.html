@@ -4,7 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>منجرة وابل</title>
-  <style>
+  <style> 
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* يمكنك التعديل حسب الحاجة */
+  height: 300px;
+  margin: auto;
+  overflow: hidden;
+}
+.slider-image {
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  opacity: 0;
+  transition: opacity 1s;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.slider-image.active {
+  opacity: 1;
+  z-index: 1;
+}
     body { font-family: 'Tahoma', sans-serif; margin: 0; padding: 0; background: #f8f8f8; color: #222; direction: rtl; }
     header { background: #222; color: white; padding: 20px; text-align: center; }
     nav { background: #444; display: flex; justify-content: center; gap: 20px; padding: 10px 0; }
@@ -24,7 +45,16 @@
     input, textarea { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
     button { background: #444; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
   </style>
-</head>
+</head> 
+<script>
+let currentIndex = 0;
+const images = document.querySelectorAll('#catalog-slider .slider-image');
+setInterval(() => {
+  images[currentIndex].classList.remove('active');
+  currentIndex = (currentIndex + 1) % images.length;
+  images[currentIndex].classList.add('active');
+}, 2500); // غيّر الرقم لتغيير سرعة التبديل
+</script>
 <body>
 
 <header>
@@ -50,19 +80,10 @@
 
 <section id="catalog">
   <h2>الكتالوج</h2>
-  <div class="catalog">
-    <div>
-      <h3> أعمال النجارة و الألومنيوم</h3>
-        <img src="https://raw.githubusercontent.com/wabilcarpentry/wabil/main/%D8%B5%D9%88%D8%B1%D8%A9%20%D9%88%D8%A7%D8%AA%D8%B3%D8%A7%D8%A8%20%D8%A8%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE%202025-05-19%20%D9%81%D9%8A%2010.00.32_f0d52f49.jpg"
-       alt="صورة واتساب بتاريخ 2025-05-19 في 10.00.32"> 
-<img src="https://raw.githubusercontent.com/wabilcarpentry/wabil/main/%D8%B5%D9%88%D8%B1%D8%A9%20%D9%88%D8%A7%D8%AA%D8%B3%D8%A7%D8%A8%20%D8%A8%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE%202025-05-19%20%D9%81%D9%8A%2010.00.33_0cf5ff32.jpg"
-     alt="صورة واتساب بتاريخ 2025-05-19 في 10.00.33">
-      <p>أبواب، خزائن، مطابخ، ديكورات خشبية بتصاميم عصرية وكلاسيكية.</p>
-
-      <p>نوافذ، واجهات زجاجية، أبواب ألومنيوم، تقسيمات داخلية وغيرها.</p>
-  
-    </div>
-  </div>
+ <div class="slider" id="catalog-slider">
+  <img src="https://raw.githubusercontent.com/wabilcarpentry/wabil/main/%D8%B5%D9%88%D8%B1%D8%A9%20%D9%88%D8%A7%D8%AA%D8%B3%D8%A7%D8%A8%20%D8%A8%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE%202025-05-19%20%20%D9%81%D9%8A%2010.00.32_2b0a32fb.jpg" class="slider-image active" alt="صورة1">
+  <img src="https://raw.githubusercontent.com/wabilcarpentry/wabil/main/%D8%B5%D9%88%D8%B1%D8%A9%20%D9%88%D8%A7%D8%AA%D8%B3%D8%A7%D8%A8%20%D8%A8%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE%202025-05-19%20%D9%81%D9%8A%2010.00.33_f6c1d7b5.jpg" class="slider-image" alt="صورة2">
+</div>
 </section>
 
 <section id="services">
@@ -78,7 +99,7 @@
 <section id="contact">
   <h2>اتصل بنا</h2>
   <p>📍 أبوظبي - مصفح M40</p>
-  <p>📞 أبو سعيد: 0506626377 | منصور: 0562117911 | ربيع: +971527093607</p>
+  <p>📞 أبو سعيد: 0557119887 | منصور: 0562117911 | ربيع: +971527093607</p>
   <p>📧 البريد الإلكتروني: wabilcarpentry@gmail.com</p>
   <p>📱 تابعونا على الإنستغرام: wabilcarpentry</p>
 
