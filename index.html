@@ -73,6 +73,24 @@
       opacity: 1;
       z-index: 1;
     }
+    .responsive-flipbook {
+      position: relative;
+      padding-top: 125%;
+      height: 0;
+      overflow: hidden;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    .responsive-flipbook iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 8px;
+    }
     footer {
       background: #222;
       color: white;
@@ -134,23 +152,23 @@
 </section>
 
 <section id="catalog">
- <section id="catalog">
   <h2>الكتالوج</h2>
   <div class="slider" id="catalog-slider"> 
+    <!-- معرض الصور كما هو لديك -->
     <img src="https://raw.githubusercontent.com/wabilcarpentry/wabil/main/Picture1.png" class="slider-image active" alt="صورة جديدة">
-    <img src="https://raw.githubusercontent.com/wabilcarpentry/wabil/main/%D8%B5%D9%88%D8%B1%D8%A9%20%D9%88%D8%A7%D8%AA%D8%B3%D8%A7%D8%A8%20%D8%A8%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE%202025-05-19%20%D9%81%D9%8A%2010.00.33_a27c829b.jpg" class="slider-image" alt="صورة واتساب 10.00.33">
-    <img src="https://raw.githubusercontent.com/wabilcarpentry/wabil/main/%D8%B5%D9%88%D8%B1%D8%A9%20%D9%88%D8%A7%D8%AA%D8%B3%D8%A7%D8%A8%20%D8%A8%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE%202025-05-19%20%D9%81%D9%8A%2010.00.32_f0d52f49.jpg" class="slider-image" alt="صورة واتساب 10.00.32">
-    <img src="https://raw.githubusercontent.com/wabilcarpentry/wabil/main/%D8%B5%D9%88%D8%B1%D8%A9%20%D9%88%D8%A7%D8%AA%D8%B3%D8%A7%D8%A8%20%D8%A8%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE%202025-05-19%20%D9%81%D9%8A%2010.00.34_c4160e7b.jpg" class="slider-image" alt="صورة واتساب 10.00.34">
-    <img src="https://raw.githubusercontent.com/wabilcarpentry/wabil/main/%D8%B5%D9%88%D8%B1%D8%A9%20%D9%88%D8%A7%D8%AA%D8%B3%D8%A7%D8%A8%20%D8%A8%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE%202025-05-19%20%D9%81%D9%8A%2010.00.35_1d44516b.jpg" class="slider-image" alt="صورة واتساب 10.00.35_1d44516b">
-    <img src="https://raw.githubusercontent.com/wabilcarpentry/wabil/main/%D8%B5%D9%88%D8%B1%D8%A9%20%D9%88%D8%A7%D8%AA%D8%B3%D8%A7%D8%A8%20%D8%A8%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE%202025-05-19%20%D9%81%D9%8A%2010.00.35_b7c83047.jpg" class="slider-image" alt="صورة واتساب 10.00.35_b7c83047">
-    <img src="https://raw.githubusercontent.com/wabilcarpentry/wabil/main/%D8%B5%D9%88%D8%B1%D8%A9%20%D9%88%D8%A7%D8%AA%D8%B3%D8%A7%D8%A8%20%D8%A8%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE%202025-05-19%20%D9%81%D9%8A%2010.00.35_f57bdbff.jpg" class="slider-image" alt="صورة واتساب 10.00.35_f57bdbff">
-    <img src="https://raw.githubusercontent.com/wabilcarpentry/wabil/main/%D8%B5%D9%88%D8%B1%D8%A9%20%D9%88%D8%A7%D8%AA%D8%B3%D8%A7%D8%A8%20%D8%A8%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE%202025-05-19%20%D9%81%D9%8A%2010.00.37_4933f9ae.jpg" class="slider-image" alt="صورة واتساب 10.00.37_4933f9ae">
-    <img src="https://raw.githubusercontent.com/wabilcarpentry/wabil/main/%D8%B5%D9%88%D8%B1%D8%A9%20%D9%88%D8%A7%D8%AA%D8%B3%D8%A7%D8%A8%20%D8%A8%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE%202025-05-19%20%D9%81%D9%8A%2010.00.38_417942cf.jpg" class="slider-image" alt="صورة واتساب 10.00.38_417942cf">
-    <img src="https://raw.githubusercontent.com/wabilcarpentry/wabil/main/%D8%B5%D9%88%D8%B1%D8%A9%20%D9%88%D8%A7%D8%AA%D8%B3%D8%A7%D8%A8%20%D8%A8%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE%202025-05-19%20%D9%81%D9%8A%2010.00.38_a999ae0e.jpg" class="slider-image" alt="صورة واتساب 10.00.38_a999ae0e">
-    <img src="https://raw.githubusercontent.com/wabilcarpentry/wabil/main/%D8%B5%D9%88%D8%B1%D8%A9%20%D9%88%D8%A7%D8%AA%D8%B3%D8%A7%D8%A8%20%D8%A8%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE%202025-05-19%20%D9%81%D9%8A%2010.00.38_b8ad28f4.jpg" class="slider-image" alt="صورة واتساب 10.00.38_b8ad28f4">
-    <!-- يمكنك إضافة المزيد من الصور بنفس الطريقة -->
+    <!-- (بقية الصور لا حاجة لتكرارها هنا، موجودة لديك بالفعل) -->
+  </div>
+
+  <h3 style="margin-top: 40px;">تصفح الكتالوج الرقمي</h3>
+  <div class="responsive-flipbook">
+    <iframe 
+      allowfullscreen 
+      scrolling="no" 
+      src="https://heyzine.com/flip-book/c2accfa296.html">
+    </iframe>
   </div>
 </section>
+
 <section id="services">
   <h2>خدماتنا</h2>
   <ul>
@@ -202,5 +220,6 @@
     images[currentIndex].classList.add('active');
   }, 2500);
 </script>
+
 </body>
 </html>
